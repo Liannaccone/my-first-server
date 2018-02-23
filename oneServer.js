@@ -4,20 +4,24 @@ var goodPORT = 7000;
 var badPORT = 7500;
 var tweetPORT = 7001;
 
-function handleRequest(request, response){
-	response.end("It Works! Path hit: " + request.url+ "banana!");
+var goodPhraseArr = ["Nice code!", "Nice haircut!", ""]
+
+function goodRequest(request, response){
+	response.end("Something positive");
+}
+
+function badRequest(request, response){
+	response.end("Something negative");
 }
 
 
-var goodServer = http.createServer(handleRequest);
-var badServer = http.createServer(handleRequest);
+var goodServer = http.createServer(goodRequest);
+var badServer = http.createServer(badRequest);
 
 goodServer.listen(goodPORT, function() {
-	console.log("\nServer listening on: http://localhost:"+ goodPORT,
-				"\nWhat nice code!");
+	console.log("\nServer listening on: http://localhost:"+ goodPORT)
 })
 
 badServer.listen(badPORT, function(){
-	console.log("\nServer listening on: http://localhost:"+ badPORT,
-				"\nYou have a bad haircut.");
+	console.log("\nServer listening on: http://localhost:"+ badPORT)
 })
