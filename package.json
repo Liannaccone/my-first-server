@@ -1,0 +1,23 @@
+{
+  "name": "my-first-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "oneServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Liannaccone/my-first-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Liannaccone/my-first-server/issues"
+  },
+  "homepage": "https://github.com/Liannaccone/my-first-server#readme",
+  "dependencies": {
+    "twitter": "^1.7.1"
+  }
+}
